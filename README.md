@@ -5,11 +5,11 @@ Navigate through a wall of web pages within your favorite web browser.
 * Visual Studio 2017
 * Headless Chrome server
 * Node.js
+* Environment variable PATH for `node` and `chrome`
 
 ### Installation
 * Clone repository `git clone https://github.com/Datasilk/Frames`
 * Run command `npm install`
-* Start headless Chrome server `chrome --headless --hide-scrollbars --remote-debugging-port=9222 --disable-gpu`
 * Click play in Visual Studio!
 
 ### Features
@@ -24,3 +24,6 @@ Navigate through a wall of web pages within your favorite web browser.
 
 ### Under The Hood
 Frames uses a headless Chrome window on the server in order to take a full-page screenshot of any URL you supply. Then, the screenshot is displayed as a frame within the horizontal list of web pages. If the live web page changes over time, you'll have to manually update the frame for that web page by clicking a refresh button at the bottom-right hand corner of the frame you wish to update.
+
+#### Disclaimer
+This project is meant to be ran in a localized web hosting environment (localhost) due to the fact that the application does not contain any form of user authentication.

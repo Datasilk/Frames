@@ -6,10 +6,12 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
+    <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0002" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Content\screenshots\" />
+    <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
 </Project>
