@@ -1,0 +1,13 @@
+{
+  "namespace": "Frames",
+  "environment": "development",
+  "data": {
+    "active": "SqlServerTrusted",
+    "SqlServerTrusted": "server=.\\SQL2016; database=Frames; Trusted_Connection=true"
+  },
+
+  "encryption": {
+    "salt": "?",
+    "bcrypt_work_factor": "10"
+  }
+}

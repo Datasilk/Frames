@@ -1,0 +1,10 @@
+{
+	"version": "1.0.0",
+	"name": "datasilk-core-js",
+	"private": true,
+	"devDependencies": {
+		"chrome-remote-interface": "^0.25.5",
+		"fs": "0.0.1-security",
+		"minimist": "^1.2.0"
+	}
+}
