@@ -26,6 +26,11 @@ A list of web page screenshots. Notice that each screenshot shrinks based on the
     * Select which list to load from local storage
 
 ### Future Development
+* Create new lists & navigate through each list
+  *  popup menu of lists
+* Delete frames from a list
+* Delete entire lists
+* Set initial list
 * Export lists to json
 * Import lists to local storage from json
 * Rearrange web pages
