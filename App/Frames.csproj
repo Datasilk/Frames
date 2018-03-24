@@ -5,13 +5,21 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="CSS\website.less" />
+    <Content Include="Pages\Frames\frames.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.All" Version="2.0.5" />
     <PackageReference Include="SixLabors.ImageSharp" Version="1.0.0-beta0002" />
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Content\screenshots\" />
+    <Folder Include="Scripts\utility\" />
+    <Folder Include="wwwroot\css\" />
     <Folder Include="wwwroot\images\" />
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
 </Project>

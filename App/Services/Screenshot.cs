@@ -5,7 +5,7 @@ using System.Security.Cryptography;
 
 namespace Frames.Services
 {
-    public class Screenshot: Datasilk.Service
+    public class Screenshot: Service
     {
         public Screenshot(Core DatasilkCore) : base(DatasilkCore)
         {
@@ -28,8 +28,13 @@ namespace Frames.Services
             if (url.Contains("://"))
             {
                 var md5 = MD5.Create();
-                var hash = S.Util.Str.CreateMD5(url.Split("://", 2)[1].Replace(".", "").Replace("/", "_"));
-                var filename = hash.Substring(1, 12) + ".jpg";
+
+                //create md5 hash from unique URL (after removing protocol from URL)
+                var id = url.Split("://", 2)[1].Replace(".", "").Replace("/", "_");
+                var hash = S.Util.Str.CreateMD5(id);
+                var filepart = hash.Substring(1, 12);
+                var ext = ".jpg";
+                var filename =  filepart + ext;
 
                 var i = 0;
                 while (i++ <= 2) //try generating screenshot 2 times maximum or fail trying
@@ -38,7 +43,7 @@ namespace Frames.Services
                     {
                         StartInfo = new ProcessStartInfo
                         {
-                            FileName = "node",
+                            FileName = (string)S.Server.Cache["nodejs"], //get nodejs cli command name from config file
                             Arguments = S.Server.MapPath("chrome.js") + " --url=\"" + url + "\" --full --format=\"jpg\" --filename=\"" + filename + "\"",
                             RedirectStandardOutput = true,
                             RedirectStandardError = true,
@@ -82,12 +87,10 @@ namespace Frames.Services
                                 break;
                         }
                     }
-
                     if (i == 2) { return Error(); }
                     Thread.Sleep(1000);
                 }
-                
-                return Success();
+                return filename + "|" + id;
             }
             return Error();
         }
@@ -98,7 +101,7 @@ namespace Frames.Services
             {
                 StartInfo = new ProcessStartInfo
                 {
-                    FileName = "chrome",
+                    FileName = (string)S.Server.Cache["headless-chrome"], //get chrome cli command name from config file
                     Arguments = "--headless --hide-scrollbars --remote-debugging-port=9222 --disable-gpu",
                     UseShellExecute = false,
                     CreateNoWindow = true

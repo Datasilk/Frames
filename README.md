@@ -12,6 +12,12 @@ Navigate through a wall of web pages within your favorite web browser.
 * Run command `npm install`
 * Click play in Visual Studio!
 
+![Frames List](http://www.markentingh.com/projects/frames/frames.png)
+
+A list of web page screenshots. Notice that each screenshot shrinks based on the total height of the screenshot.
+
+---
+
 ### Features
 * View a horizontal list of web pages, each page shrunken down to a manageable size that would allow 4 web pages to be placed side-by-side within a single web browser window.
 * Scroll horizontally through the list of web pages, then click one of the web pages to open it in a new browser tab

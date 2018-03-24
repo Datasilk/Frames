@@ -9,5 +9,10 @@
   "encryption": {
     "salt": "?",
     "bcrypt_work_factor": "10"
+  },
+
+  "cli": {
+    "headless-chrome": "chrome",
+    "node-js":  "node"
   }
 }

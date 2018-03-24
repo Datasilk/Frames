@@ -8,7 +8,7 @@ public class Routes : Datasilk.Routes
     {
         switch (name)
         {
-            case "": case "home": return new Frames.Pages.Home(S);
+            case "": case "home": return new Frames.Pages.Frames(S);
         }
         return base.FromPageRoutes(name);
     }

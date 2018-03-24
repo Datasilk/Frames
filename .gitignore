@@ -8,6 +8,8 @@
 
 /App/Content/screenshots/
 /App/wwwroot/content/screenshots/
+/App/wwwroot/js
+/App/wwwroot/css
 
 *.bak
 *.jfm
