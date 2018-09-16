@@ -37,8 +37,6 @@ var gulp = require('gulp'),
     cleancss = require('gulp-clean-css'),
     less = require('gulp-less'),
     rename = require('gulp-rename'),
-    merge = require('merge-stream'),
-    changed = require('gulp-changed'),
     config = require('./App/config.json');
 
 //get config variables from config.json

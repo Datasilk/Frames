@@ -3,9 +3,8 @@
 	"name": "datasilk-core-js",
 	"private": true,
 	"devDependencies": {
-		"chrome-remote-interface": "^0.25.5",
+		"chrome-remote-interface": "^0.25.7",
 		"fs": "0.0.1-security",
-		"minimist": "^1.2.0",
 		"gulp": "^3.9.1",
 		"gulp-changed": "^3.2.0",
 		"gulp-clean-css": "^2.3.2",
@@ -14,7 +13,8 @@
 		"gulp-less": "3.1.0",
 		"gulp-rename": "1.2.2",
 		"gulp-uglify": "2.0.0",
-		"merge-stream": "1.0.0"
+		"merge-stream": "1.0.0",
+		"minimist": "^1.2.0"
 	},
 	"dependencies": {
 		"into-stream": "^3.1.0"

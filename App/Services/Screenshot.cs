@@ -104,7 +104,8 @@ namespace Frames.Services
                     FileName = (string)S.Server.Cache["headless-chrome"], //get chrome cli command name from config file
                     Arguments = "--headless --hide-scrollbars --remote-debugging-port=9222 --disable-gpu",
                     UseShellExecute = false,
-                    CreateNoWindow = true
+                    CreateNoWindow = true,
+                    WorkingDirectory = "C:\\Program Files (x86)\\Google\\Chrome\\Application\\"
                 }
             };
             process.Start();

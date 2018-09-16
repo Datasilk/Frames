@@ -10,6 +10,7 @@ Navigate through a wall of web pages within your favorite web browser.
 ### Installation
 * Clone repository `git clone https://github.com/Datasilk/Frames`
 * Run command `npm install`
+* Make sure to add Google Chrome to your PATH Environment variable (C:\Program Files (x86)\Google\Chrome\Application\)
 * Click play in Visual Studio!
 
 ![Frames List](http://www.markentingh.com/projects/frames/frames.png)
